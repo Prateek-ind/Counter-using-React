@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { useReducer } from "react";
 import Button from "./Button";
 
 const initialState = { count: 0, inputNum: 1 };
@@ -17,6 +17,10 @@ function counterReducer(state, action) {
     updatedState.count = 0;
     return updatedState;
   }
+  if (action.type === "INPUT_NUM") {
+    updatedState.inputNum = action.payload;
+    return updatedState;
+  }
   return state;
 }
 
@@ -25,18 +29,17 @@ const App = () => {
     counterReducer,
     initialState
   );
-  const inputOperator = useRef();
 
   function handleDecrement() {
     countStateDispatch({
       type: "DECREMENT",
-      payload: initialState.inputNum,
+      payload: countState.inputNum,
     });
   }
   function handleIncrement() {
     countStateDispatch({
       type: "INCREMENT",
-      payload: initialState.inputNum,
+      payload: countState.inputNum,
     });
   }
   function handleReset() {
@@ -49,10 +52,16 @@ const App = () => {
     const val = e.target.value;
 
     if (val === "") {
-      countState.inputNum = ""; // Let it be empty
+      countStateDispatch({
+        type: "INPUT_NUM",
+        payload: "",
+      }); // Let it be empty
     } else {
       const cleaned = val.replace(/^0+(?!$)/, "");
-      countState.inputNum = Number(cleaned);
+      countStateDispatch({
+        type: "INPUT_NUM",
+        payload: Number(cleaned),
+      });
     }
   }
 
@@ -71,7 +80,6 @@ const App = () => {
           inputMode="numeric"
           pattern="[0-9]*"
           value={countState.inputNum}
-          ref={inputOperator}
           onChange={handleInput}
         />
       </div>
