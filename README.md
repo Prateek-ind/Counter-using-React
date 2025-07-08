@@ -51,7 +51,6 @@ Then open `http://localhost:5173` in your browser.
 
 <img src="./public/screenshot.png" alt="Counter App Screenshot" width="276" height="395" />
 
-> Make sure to rename your screenshot image as `screenshot.png` and place it in the project root before pushing.
 
 ---
 
@@ -82,4 +81,4 @@ counter-app/
 
 ## 📜 License
 
-MIT © [Your Name](https://github.com/your-username)
+MIT © [Prateek Kumar](https://github.com/Prateek-ind)
