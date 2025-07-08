@@ -1,3 +1,4 @@
+
 # 🔢 Counter App
 
 A simple and responsive counter application built using **React**, **Vite**, and **Tailwind CSS**.
@@ -6,12 +7,11 @@ A simple and responsive counter application built using **React**, **Vite**, and
 
 ## 🚀 Features
 
-- Increment and decrement the counter
-- Custom step size input
-- Reset counter to zero
-- Responsive and accessible UI with Tailwind
-- Input validation with support for clearing input
-
+- Increment and decrement the counter  
+- Custom step size input  
+- Reset counter to zero  
+- Responsive and accessible UI with Tailwind  
+- Input validation with support for clearing input  
 
 ---
 
@@ -25,7 +25,62 @@ A simple and responsive counter application built using **React**, **Vite**, and
 
 ## 📦 Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/your-username/counter-app.git
 cd counter-app
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the App Locally
+
+```bash
+npm run dev
+```
+
+Then open `http://localhost:5173` in your browser.
+
+---
+
+## 📸 Screenshot
+
+<img src="./screenshot.png" alt="Counter App Screenshot" width="276" height="395" />
+
+> Make sure to rename your screenshot image as `screenshot.png` and place it in the project root before pushing.
+
+---
+
+## 📁 Project Structure
+
+```
+counter-app/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── Button.jsx
+│   └── main.jsx
+├── screenshot.png
+├── index.html
+├── package.json
+└── tailwind.config.js
+```
+
+---
+
+## 💡 Future Improvements
+
+- Add animations and transitions  
+- Add keyboard accessibility  
+- Save counter state to local storage  
+
+---
+
+## 📜 License
+
+MIT © [Your Name](https://github.com/your-username)
